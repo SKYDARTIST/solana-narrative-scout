@@ -38,15 +38,18 @@ st.markdown("""
         border: 1px solid rgba(20, 241, 149, 0.5);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-    /* Force equal height columns */
-    div[data-testid="column"] {
-        display: flex;
-        flex-direction: column;
+    /* Force equal height columns and inner cards */
+    [data-testid="stHorizontalBlock"] {
+        align-items: stretch !important;
     }
-    div[data-testid="column"] > div {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
+    [data-testid="column"] {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    [data-testid="column"] > div {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
     }
     .idea-card {
         background: rgba(255, 255, 255, 0.03);
@@ -58,7 +61,9 @@ st.markdown("""
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        min-height: 400px; /* Balanced height for portability */
+        justify-content: space-between;
+        min-height: 450px; /* Increased to accommodate longer descriptions */
+        height: 100%;
     }
     .idea-card:hover {
         transform: translateY(-5px);
