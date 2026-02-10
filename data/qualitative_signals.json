@@ -1,0 +1,51 @@
+[
+    {
+        "source": "Messari",
+        "title": "State of Solana Q4 2025/2026",
+        "content": "Solana's on-chain market structure experimenting with L1 vs L2 dynamics. SVM becoming a pluggable execution layer.",
+        "tags": [
+            "SVM",
+            "L2",
+            "Architecture"
+        ]
+    },
+    {
+        "source": "Helius Labs",
+        "title": "AI Agent API Empowerment",
+        "content": "Enabled AI agents to generate and fund their own API keys via CLI. Focus on autonomous agentic commerce.",
+        "tags": [
+            "AI Agents",
+            "Infra",
+            "Agentic Commerce"
+        ]
+    },
+    {
+        "source": "Electric Capital",
+        "title": "Developer Report Feb 2026",
+        "content": "Solana leading in full-time developer growth. 83% increase in total devs since previous cycles. Focus on scalability and low cost.",
+        "tags": [
+            "Dev Growth",
+            "Scalability"
+        ]
+    },
+    {
+        "source": "Technical Narrative",
+        "title": "ZK-Compression (Light Protocol)",
+        "content": "Substantial reduction in storage costs via SNARKs. Crucial for state growth management in 2026.",
+        "tags": [
+            "ZK",
+            "Compression",
+            "Scaling"
+        ]
+    },
+    {
+        "source": "DePIN Trend",
+        "title": "DePIN-AI Synergy",
+        "content": "Solana hosting 50+ DePIN projects (Helium, Grass, Hivemapper). DePIN viewed as foundational layer for AI infrastructure.",
+        "tags": [
+            "DePIN",
+            "AI",
+            "GPU"
+        ]
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "narrative_name": "Autonomous Agentic Commerce",
+        "explanation": "Solana is evolving from a user-centric chain to an agent-centric one. Developers are building persistent, autonomous on-chain actors that manage their own resources, API keys, and execution logic. This trend is driven by the need for high-frequency, logic-heavy interactions that are too fast for human manual input.",
+        "evidence": {
+            "github": [
+                "Drakkar-Software/OctoBot (5206 stars)",
+                "chainstacklabs/pumpfun-bonkfun-bot",
+                "AV1080p/Solana-Sniper-Bot"
+            ],
+            "onchain": [
+                "8% growth in Active Developer Wallets",
+                "Stable growth in Program Deployments"
+            ],
+            "market_intel": [
+                "Helius Labs enabled AI agents to self-fund API keys",
+                "Rise of 'Agentic Commerce' as a core 2026 thesis"
+            ]
+        },
+        "novelty_score": 9.2
+    },
+    {
+        "narrative_name": "ZK-Compressed State Economy",
+        "explanation": "ZK-compression is solving Solana's 'State Growth' bottleneck. By moving the majority of account data off-chain while maintaining security via SNARKs, developers can now build applications that were once too expensive. This is fostering a new economy of state-heavy dApps (e.g., massive-scale DePIN, complex identity systems).",
+        "evidence": {
+            "github": [
+                "solana-playground/solana-playground (Rust growth)",
+                "solana-foundation/solana-web3.js (new ZK support)"
+            ],
+            "onchain": [
+                "Significant Spike in ZK-Compression Usage (+45%)"
+            ],
+            "market_intel": [
+                "Light Protocol official ZK-compression release",
+                "State growth management identified as crucial for 2026 scalability"
+            ]
+        },
+        "novelty_score": 8.5
+    },
+    {
+        "narrative_name": "SVM Verticalization (SVM-as-a-Service)",
+        "explanation": "The Solana Virtual Machine (SVM) is being decoupled from the main L1 to serve as the execution engine for specialized 'Vertical SVMs' and Rollups. This modular approach allows for application-specific throughput and custom environment configs while leveraging Solana's parallelization tech.",
+        "evidence": {
+            "github": [
+                "rpcpool/yellowstone-grpc (High-perf streaming)",
+                "firedancer-io/firedancer (Modular validator client)"
+            ],
+            "onchain": [
+                "12% increase in new unique Program IDs",
+                "New SVM rollups like Sonic and SOON showing dev traction"
+            ],
+            "market_intel": [
+                "Messari reports on L1 vs L2 dynamics for Solana",
+                "SVM becoming a 'pluggable' execution layer for 2026"
+            ]
+        },
+        "novelty_score": 8.8
+    }
+]

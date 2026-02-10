@@ -1,0 +1,71 @@
+[
+    {
+        "narrative_name": "Autonomous Agentic Commerce",
+        "ideas": [
+            {
+                "title": "AgentKey Vault",
+                "description": "A self-custody vault for AI agents that allows them to 'allow-list' specific RPC methods and fund their own API keys autonomously using the Helius CLI pattern.",
+                "tech_stack": "Anchor, Helius API, Rust-based Agent SDK",
+                "feasibility": "High. Helius already enabled the CLI fund-raising for agents; this just needs a secure UI/Vault layer."
+            },
+            {
+                "title": "Sentinel Agent Marketplace",
+                "description": "A marketplace where users rent 'Sentinel Agents' to monitor DeFi positions 24/7 and execute defensive swaps or liquidations autonomously based on pre-set logic.",
+                "tech_stack": "Solana SDK, Python (Agent Logic), Jupiter API",
+                "feasibility": "Medium. Requires robust automation infrastructure but fits the current trend of 'agent-on-behalf-of-user'."
+            },
+            {
+                "title": "Agent Micro-Payment Rail",
+                "description": "A protocol using SPL Token-2022 Transfer Hooks to enable automated, granular payments between AI bots for specialized tasks (e.g., data fetching, compute sharing).",
+                "tech_stack": "Token-2022, Transfer Hooks, Anchor",
+                "feasibility": "High. Leverages the native programmability of Solana's new token standard."
+            }
+        ]
+    },
+    {
+        "narrative_name": "ZK-Compressed State Economy",
+        "ideas": [
+            {
+                "title": "Mint-X: Compressed NFT Engine",
+                "description": "A mass-minting tool for brands to issue millions of compressed NFTs or loyalty tokens at 99% lower cost than standard accounts via Light Protocol.",
+                "tech_stack": "Light Protocol, ZK-Compression, React",
+                "feasibility": "High. The infra is live; the ecosystem just needs user-friendly tooling for non-technical brands."
+            },
+            {
+                "title": "ZK-Identity Registry",
+                "description": "A privacy-preserving identity registry where user data is stored in compressed state, allowing for private on-chain verification via SNARK proofs.",
+                "tech_stack": "Light Protocol, SNARKs, Anchor",
+                "feasibility": "Medium. Technical barrier is higher but the ROI on privacy is massive in 2026."
+            },
+            {
+                "title": "Compressed On-Chain DB",
+                "description": "A developer tool providing a 'SQL-like' interface for Solana app data, where the tables are stored entirely in ZK-compressed state.",
+                "tech_stack": "Rust, ZK-Compression, IndexedDB",
+                "feasibility": "High. Solves the 'storage cost' problem for complex dApp backends."
+            }
+        ]
+    },
+    {
+        "narrative_name": "SVM Verticalization (SVM-as-a-Service)",
+        "ideas": [
+            {
+                "title": "SVM Game State Rollup",
+                "description": "A specialized SVM rollup optimized for sub-second game state updates (e.g., loot drops, move logs) that settles rare assets to Solana L1.",
+                "tech_stack": "Sonic SVM, Anchor, Yellowstone gRPC",
+                "feasibility": "Medium. Requires working with specialized SVM layers like Sonic or SOON."
+            },
+            {
+                "title": "RWA Institutional SVM",
+                "description": "A pluggable SVM layer for Real-World Assets that implements KYC-gatekeepers at the instruction level for regulatory compliance.",
+                "tech_stack": "SVM architecture, Anchor, ZK-Identity",
+                "feasibility": "Medium. Capitalizes on the trend of 'SVM as a pluggable execution layer'."
+            },
+            {
+                "title": "Yellowstone Explorer",
+                "description": "A high-speed cross-SVM bridge and explorer that uses Yellowstone gRPC to monitor activity across multiple SVM rollups in real-time.",
+                "tech_stack": "Yellowstone gRPC, Rust, Next.js",
+                "feasibility": "High. Critical infrastructure for the growing multi-SVM landscape."
+            }
+        ]
+    }
+]
