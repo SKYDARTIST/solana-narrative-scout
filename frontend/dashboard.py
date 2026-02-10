@@ -38,35 +38,46 @@ st.markdown("""
         border: 1px solid rgba(20, 241, 149, 0.5);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
+    /* Force equal height columns */
+    div[data-testid="column"] {
+        display: flex;
+        flex-direction: column;
+    }
+    div[data-testid="column"] > div {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
     .idea-card {
         background: rgba(255, 255, 255, 0.03);
         border-radius: 12px;
-        padding: 20px;
+        padding: 25px;
         margin-top: 15px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         transition: all 0.3s ease;
-        height: 100%;
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
+        min-height: 420px; /* Force a consistent base height */
     }
     .idea-card:hover {
         transform: translateY(-5px);
         background: rgba(153, 69, 255, 0.08);
         border: 1px solid rgba(153, 69, 255, 0.3);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
     .idea-label {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
     }
-    .idea-target { color: #14F195; }
-    .idea-stack { color: #9945FF; }
+    .idea-target { color: #14F195; margin-top: 20px; }
+    .idea-stack { color: #9945FF; margin-top: 15px; }
     .badge {
         background: #14F195;
         color: black;
