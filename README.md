@@ -7,6 +7,18 @@ SignalVane is an AI-powered autonomous agent that detects emerging Solana narrat
 ## 🚀 Live Demo
 **[View Live Dashboard →](https://solana-narrative-scout.streamlit.app)**
 
+### 📸 Dashboard Preview
+
+**Narrative Detection & Evidence**
+![Dashboard Overview](assets/Screenshot%202026-02-11%20at%203.26.45%20AM.png)
+
+**AI-Generated Build Ideas**
+![Build Ideas](assets/Screenshot%202026-02-11%20at%203.29.02%20AM.png)
+
+**All 3 Detected Narratives**
+![SVM Narrative](assets/Screenshot%202026-02-11%20at%203.29.14%20AM.png)
+![ZK-Compression Narrative](assets/Screenshot%202026-02-11%20at%203.29.27%20AM.png)
+
 ## 📊 Fortnightly Narratives (Feb 2026)
 1.  **Autonomous Agentic Commerce:** The shift from user-to-dApp to agent-to-agent interactions.
 2.  **ZK-Compressed State Economy:** Massive scaling via Light Protocol's ZK-compression.
