@@ -45,25 +45,33 @@ st.markdown("""
     [data-testid="column"] {
         display: flex !important;
         flex-direction: column !important;
+        height: initial !important; /* Reset to allow flex growth */
     }
     [data-testid="column"] > div {
         display: flex !important;
         flex-direction: column !important;
         flex-grow: 1 !important;
+        height: 100% !important;
+    }
+    /* Deep target the Streamlit markdown container */
+    [data-testid="column"] [data-testid="stMarkdown"] {
+        flex-grow: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     .idea-card {
         background: rgba(255, 255, 255, 0.03);
         border-radius: 12px;
-        padding: 25px;
+        padding: 22px;
         margin-top: 15px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         transition: all 0.3s ease;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 450px; /* Increased to accommodate longer descriptions */
-        height: 100%;
+        flex-grow: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        min-height: 480px; /* Increased floor to prevent jumpiness */
+        height: 100% !important;
     }
     .idea-card:hover {
         transform: translateY(-5px);
