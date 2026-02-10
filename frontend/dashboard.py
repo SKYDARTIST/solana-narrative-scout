@@ -58,7 +58,7 @@ st.markdown("""
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        min-height: 420px; /* Force a consistent base height */
+        min-height: 400px; /* Balanced height for portability */
     }
     .idea-card:hover {
         transform: translateY(-5px);
@@ -76,8 +76,8 @@ st.markdown("""
         align-items: center;
         gap: 8px;
     }
-    .idea-target { color: #14F195; margin-top: 20px; }
-    .idea-stack { color: #9945FF; margin-top: 15px; }
+    .idea-target { color: #14F195; }
+    .idea-stack { color: #9945FF; }
     .badge {
         background: #14F195;
         color: black;
@@ -162,12 +162,14 @@ def main():
                         st.markdown(f"""
                             <div class="idea-card">
                                 <h4 style='margin-bottom:10px; color:white;'>{idea['title']}</h4>
-                                <p style='font-size:0.9rem; opacity:0.8; flex-grow:1;'>{idea['description']}</p>
-                                <div style='margin-top:15px;'>
+                                <div style='flex-grow: 1;'>
+                                    <p style='font-size:0.93rem; opacity:0.8; line-height:1.4;'>{idea['description']}</p>
+                                </div>
+                                <div style='margin-top:20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top:15px;'>
                                     <div class="idea-label idea-target">👤 Target User</div>
-                                    <div style='font-size:0.85rem; margin-bottom:10px;'>{idea['target_user']}</div>
+                                    <div style='font-size:0.85rem; margin-bottom:12px; opacity:0.9;'>{idea['target_user']}</div>
                                     <div class="idea-label idea-stack">🛠️ Tech Stack</div>
-                                    <div style='font-size:0.85rem; font-family:monospace;'>{idea['tech_stack']}</div>
+                                    <div style='font-size:0.8rem; font-family:monospace; opacity:0.8;'>{idea['tech_stack']}</div>
                                 </div>
                             </div>
                         """, unsafe_allow_html=True)
