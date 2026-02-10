@@ -121,6 +121,9 @@ def main():
                             <div class="idea-card">
                                 <strong>{idea['title']}</strong><br>
                                 <small>{idea['description']}</small><br>
+                                <p style='font-size:0.7rem; color:#14F195; margin-top:5px;'>
+                                    <b>Target User:</b> {idea.get('target_user', 'General builders')}
+                                </p>
                                 <p style='font-size:0.7rem; color:#9945FF; margin-top:5px;'>
                                     <b>Stack:</b> {idea['tech_stack']}
                                 </p>

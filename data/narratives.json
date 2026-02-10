@@ -4,9 +4,9 @@
         "explanation": "Solana is evolving from a user-centric chain to an agent-centric one. Developers are building persistent, autonomous on-chain actors that manage their own resources, API keys, and execution logic. This trend is driven by the need for high-frequency, logic-heavy interactions that are too fast for human manual input.",
         "evidence": {
             "github": [
-                "Drakkar-Software/OctoBot (5206 stars)",
-                "chainstacklabs/pumpfun-bonkfun-bot",
-                "AV1080p/Solana-Sniper-Bot"
+                "helius-labs/helius-sdk (Agent API funding patterns)",
+                "coral-xyz/anchor (Agent-as-program frameworks)",
+                "metaplex-foundation/mpl-core (Autonomous NFT operations)"
             ],
             "onchain": [
                 "8% growth in Active Developer Wallets",
@@ -24,8 +24,9 @@
         "explanation": "ZK-compression is solving Solana's 'State Growth' bottleneck. By moving the majority of account data off-chain while maintaining security via SNARKs, developers can now build applications that were once too expensive. This is fostering a new economy of state-heavy dApps (e.g., massive-scale DePIN, complex identity systems).",
         "evidence": {
             "github": [
-                "solana-playground/solana-playground (Rust growth)",
-                "solana-foundation/solana-web3.js (new ZK support)"
+                "Lightprotocol/light-protocol (Native ZK-compression implementation)",
+                "solana-labs/solana-program-library (Token-2022 compression support)",
+                "metaplex-foundation/compression (Compressed NFT standards)"
             ],
             "onchain": [
                 "Significant Spike in ZK-Compression Usage (+45%)"
@@ -42,8 +43,9 @@
         "explanation": "The Solana Virtual Machine (SVM) is being decoupled from the main L1 to serve as the execution engine for specialized 'Vertical SVMs' and Rollups. This modular approach allows for application-specific throughput and custom environment configs while leveraging Solana's parallelization tech.",
         "evidence": {
             "github": [
-                "rpcpool/yellowstone-grpc (High-perf streaming)",
-                "firedancer-io/firedancer (Modular validator client)"
+                "rpcpool/yellowstone-grpc (High-performance gRPC streaming for SVM)",
+                "firedancer-io/firedancer (Modular validator architecture)",
+                "anza-xyz/agave (Core SVM runtime optimizations)"
             ],
             "onchain": [
                 "12% increase in new unique Program IDs",

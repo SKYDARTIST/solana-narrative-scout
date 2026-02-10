@@ -5,7 +5,7 @@
 SignalVane is an AI-powered autonomous agent that detects emerging Solana narratives by synthesizing signals across developer activity (GitHub), on-chain metrics (RPC), and collective market intelligence (Messari/Helius).
 
 ## 🚀 Live Demo
-[Link to Hosted Tool] (e.g., Streamlit Cloud)
+**[View Live Dashboard →](https://solana-narrative-scout.streamlit.app)**
 
 ## 📊 Fortnightly Narratives (Feb 2026)
 1.  **Autonomous Agentic Commerce:** The shift from user-to-dApp to agent-to-agent interactions.
