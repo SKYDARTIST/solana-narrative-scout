@@ -39,17 +39,34 @@ st.markdown("""
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
     .idea-card {
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
-        padding: 15px;
-        margin-top: 10px;
-        border-left: 4px solid #9945FF;
-        transition: transform 0.2s ease;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .idea-card:hover {
-        transform: translateX(5px);
-        background: rgba(153, 69, 255, 0.1);
+        transform: translateY(-5px);
+        background: rgba(153, 69, 255, 0.08);
+        border: 1px solid rgba(153, 69, 255, 0.3);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
+    .idea-label {
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .idea-target { color: #14F195; }
+    .idea-stack { color: #9945FF; }
     .badge {
         background: #14F195;
         color: black;
@@ -133,14 +150,14 @@ def main():
                     with cols[i % 3]:
                         st.markdown(f"""
                             <div class="idea-card">
-                                <strong>{idea['title']}</strong><br>
-                                <small>{idea['description']}</small><br>
-                                <p style='font-size:0.7rem; color:#14F195; margin-top:5px;'>
-                                    <b>Target User:</b> {idea.get('target_user', 'General builders')}
-                                </p>
-                                <p style='font-size:0.7rem; color:#9945FF; margin-top:5px;'>
-                                    <b>Stack:</b> {idea['tech_stack']}
-                                </p>
+                                <h4 style='margin-bottom:10px; color:white;'>{idea['title']}</h4>
+                                <p style='font-size:0.9rem; opacity:0.8; flex-grow:1;'>{idea['description']}</p>
+                                <div style='margin-top:15px;'>
+                                    <div class="idea-label idea-target">👤 Target User</div>
+                                    <div style='font-size:0.85rem; margin-bottom:10px;'>{idea['target_user']}</div>
+                                    <div class="idea-label idea-stack">🛠️ Tech Stack</div>
+                                    <div style='font-size:0.85rem; font-family:monospace;'>{idea['tech_stack']}</div>
+                                </div>
                             </div>
                         """, unsafe_allow_html=True)
             st.markdown("<br>", unsafe_allow_html=True)
