@@ -25,18 +25,30 @@ st.markdown("""
         padding: 25px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 20px;
-        transition: transform 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: fadeIn 0.8s ease-out forwards;
+        opacity: 0;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     .narrative-card:hover {
-        transform: translateY(-5px);
-        border: 1px solid rgba(255, 0, 255, 0.3);
+        transform: scale(1.02);
+        border: 1px solid rgba(20, 241, 149, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
     .idea-card {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.3);
         border-radius: 10px;
         padding: 15px;
         margin-top: 10px;
         border-left: 4px solid #9945FF;
+        transition: transform 0.2s ease;
+    }
+    .idea-card:hover {
+        transform: translateX(5px);
+        background: rgba(153, 69, 255, 0.1);
     }
     .badge {
         background: #14F195;
@@ -87,8 +99,10 @@ def main():
     
     for idx, narrative in enumerate(narratives):
         with st.container():
+            # Apply staggered delay using CSS
+            delay = idx * 0.2
             st.markdown(f"""
-                <div class="narrative-card">
+                <div class="narrative-card" style="animation-delay: {delay}s;">
                     <span class="badge">Novelty: {narrative['novelty_score']}/10</span>
                     <h2 style='color:#14F195;'>{narrative['narrative_name']}</h2>
                     <p style='font-size: 1.1rem;'>{narrative['explanation']}</p>
