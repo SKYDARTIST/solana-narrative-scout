@@ -1,8 +1,35 @@
 # SignalVane 📡
-### Autonomous Narrative Detection for the Solana Ecosystem
-**A Winning Prototype for the Superteam Earn Bounty**
+### Real-Time Autonomous Narrative Detection for Solana
+**An AI Agent Submission for Superteam Earn**
 
-SignalVane is an AI-powered autonomous agent that detects emerging Solana narratives by synthesizing signals across developer activity (GitHub), on-chain metrics (RPC), and collective market intelligence (Messari/Helius).
+SignalVane is a production-grade AI-powered autonomous agent that detects and tracks emerging Solana narratives in real-time. Features live data updates, historical trend analysis, sentiment scoring, and interactive visualizations.
+
+## ✨ Key Features
+
+### 🔄 Real-Time Updates
+- Auto-refreshes data every 15 minutes
+- Live update indicator showing last refresh time
+- Smart caching to minimize API calls
+
+### 📈 Historical Trend Analysis
+- Tracks narrative evolution over time
+- Visual trend indicators: ↗ Rising | → Stable | ↘ Falling | ✨ New
+- Interactive Plotly charts showing 7-day trends
+
+### 😊 Sentiment Analysis
+- AI-powered sentiment scoring (Positive/Neutral/Negative)
+- Based on novelty scores and evidence strength
+- Color-coded badges for quick assessment
+
+### 🎛️ Advanced Filtering & Sorting
+- Filter by sentiment, trend, or novelty score
+- Sort narratives by multiple criteria
+- Interactive sidebar controls
+
+### 📊 Professional Visualizations
+- Plotly-powered interactive charts
+- Glassmorphism UI with smooth animations
+- Real-time metric tracking
 
 ## 🚀 Live Demo
 **[View Live Dashboard →](https://solana-narrative-scout.streamlit.app)**

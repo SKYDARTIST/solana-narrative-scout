@@ -1,0 +1,319 @@
+{
+  "snapshots": [
+    {
+      "timestamp": "2026-02-11T05:39:30.737125",
+      "narratives": [
+        {
+          "narrative_name": "The Rise of Autonomous On-Chain AI Agents",
+          "explanation": "Solana is transitioning from a platform for traditional smart contracts to a bustling ecosystem for autonomous, self-funding AI agents. This shift is driven by Solana's inherent speed and low transaction costs, combined with new architectural patterns and developer tooling that empower AI entities to execute complex strategies, manage their own resources, and interact with the blockchain as first-class participants. This creates a new paradigm for decentralized automation and intelligent applications.",
+          "evidence": {
+            "github": [
+              "Drakkar-Software/OctoBot (5206 stars, Python): Free open source crypto trading bot to automate AI...",
+              "AV1080p/Solana-Sniper-Bot (1921 stars, Rust): solana sniper bot...",
+              "x89/Solana-Arbitrage-Bot (1136 stars, Rust): Solana Arbitrage Bot..."
+            ],
+            "onchain": [
+              "New Program Deployments: 142 (+12%)",
+              "Active Developer Wallets: 2,450 (+8%)"
+            ],
+            "market_intel": [
+              "Helius Blog: AI agents can now self-fund their API keys via CLI",
+              "Anatoly Twitter: Discussion on agent-centric design patterns for Solana programs"
+            ]
+          },
+          "novelty_score": 9
+        },
+        {
+          "narrative_name": "Solana's SVM as a Modular, Pluggable Execution Layer",
+          "explanation": "The Solana Virtual Machine (SVM) is evolving beyond a monolithic mainnet execution environment to become a versatile, pluggable execution layer for custom rollups and specialized blockchain instances. This modularity, enabled by initiatives like Firedancer and critical scaling technologies such as ZK-compression, positions Solana as a foundational 'execution-as-a-service' provider, allowing developers to leverage its high performance and robust tooling within a multi-chain or application-specific context.",
+          "evidence": {
+            "github": [
+              "firedancer-io/firedancer (1395 stars, C): Firedancer is Jump Crypto's Solana validator software."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Messari Report: Solana SVM becoming a pluggable execution layer for custom rollups",
+              "Firedancer Team: Modular validator architecture allowing specialized SVM implementations",
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 8.0
+        },
+        {
+          "narrative_name": "Hyper-Efficient On-Chain State Management with ZK-Compression",
+          "explanation": "The widespread and significant adoption of ZK-compression on Solana is fundamentally changing the economics and scalability of managing state on-chain. This technology dramatically reduces the cost and footprint of storing and updating large datasets, unlocking entirely new categories of applications that were previously impractical due to prohibitive on-chain storage costs or throughput limitations. This enables a new generation of data-intensive dApps and high-frequency, complex on-chain operations.",
+          "evidence": {
+            "github": [
+              "solana-developers/program-examples (1365 stars, TypeScript): A repository of Solana program examples (implying exploration of new program designs leveraging efficiency)",
+              "solana-web3.js (2699 stars, TypeScript) and solana-py (1424 stars, Python) usage indicates developers are actively building and interacting with Solana's evolving state management."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 7.0
+        }
+      ],
+      "metrics": {
+        "simulated": true
+      }
+    },
+    {
+      "timestamp": "2026-02-11T05:39:30.737533",
+      "narratives": [
+        {
+          "narrative_name": "The Rise of Autonomous On-Chain AI Agents",
+          "explanation": "Solana is transitioning from a platform for traditional smart contracts to a bustling ecosystem for autonomous, self-funding AI agents. This shift is driven by Solana's inherent speed and low transaction costs, combined with new architectural patterns and developer tooling that empower AI entities to execute complex strategies, manage their own resources, and interact with the blockchain as first-class participants. This creates a new paradigm for decentralized automation and intelligent applications.",
+          "evidence": {
+            "github": [
+              "Drakkar-Software/OctoBot (5206 stars, Python): Free open source crypto trading bot to automate AI...",
+              "AV1080p/Solana-Sniper-Bot (1921 stars, Rust): solana sniper bot...",
+              "x89/Solana-Arbitrage-Bot (1136 stars, Rust): Solana Arbitrage Bot..."
+            ],
+            "onchain": [
+              "New Program Deployments: 142 (+12%)",
+              "Active Developer Wallets: 2,450 (+8%)"
+            ],
+            "market_intel": [
+              "Helius Blog: AI agents can now self-fund their API keys via CLI",
+              "Anatoly Twitter: Discussion on agent-centric design patterns for Solana programs"
+            ]
+          },
+          "novelty_score": 9
+        },
+        {
+          "narrative_name": "Solana's SVM as a Modular, Pluggable Execution Layer",
+          "explanation": "The Solana Virtual Machine (SVM) is evolving beyond a monolithic mainnet execution environment to become a versatile, pluggable execution layer for custom rollups and specialized blockchain instances. This modularity, enabled by initiatives like Firedancer and critical scaling technologies such as ZK-compression, positions Solana as a foundational 'execution-as-a-service' provider, allowing developers to leverage its high performance and robust tooling within a multi-chain or application-specific context.",
+          "evidence": {
+            "github": [
+              "firedancer-io/firedancer (1395 stars, C): Firedancer is Jump Crypto's Solana validator software."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Messari Report: Solana SVM becoming a pluggable execution layer for custom rollups",
+              "Firedancer Team: Modular validator architecture allowing specialized SVM implementations",
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 7.6
+        },
+        {
+          "narrative_name": "Hyper-Efficient On-Chain State Management with ZK-Compression",
+          "explanation": "The widespread and significant adoption of ZK-compression on Solana is fundamentally changing the economics and scalability of managing state on-chain. This technology dramatically reduces the cost and footprint of storing and updating large datasets, unlocking entirely new categories of applications that were previously impractical due to prohibitive on-chain storage costs or throughput limitations. This enables a new generation of data-intensive dApps and high-frequency, complex on-chain operations.",
+          "evidence": {
+            "github": [
+              "solana-developers/program-examples (1365 stars, TypeScript): A repository of Solana program examples (implying exploration of new program designs leveraging efficiency)",
+              "solana-web3.js (2699 stars, TypeScript) and solana-py (1424 stars, Python) usage indicates developers are actively building and interacting with Solana's evolving state management."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 6.6
+        }
+      ],
+      "metrics": {
+        "simulated": true
+      }
+    },
+    {
+      "timestamp": "2026-02-11T05:39:30.737962",
+      "narratives": [
+        {
+          "narrative_name": "The Rise of Autonomous On-Chain AI Agents",
+          "explanation": "Solana is transitioning from a platform for traditional smart contracts to a bustling ecosystem for autonomous, self-funding AI agents. This shift is driven by Solana's inherent speed and low transaction costs, combined with new architectural patterns and developer tooling that empower AI entities to execute complex strategies, manage their own resources, and interact with the blockchain as first-class participants. This creates a new paradigm for decentralized automation and intelligent applications.",
+          "evidence": {
+            "github": [
+              "Drakkar-Software/OctoBot (5206 stars, Python): Free open source crypto trading bot to automate AI...",
+              "AV1080p/Solana-Sniper-Bot (1921 stars, Rust): solana sniper bot...",
+              "x89/Solana-Arbitrage-Bot (1136 stars, Rust): Solana Arbitrage Bot..."
+            ],
+            "onchain": [
+              "New Program Deployments: 142 (+12%)",
+              "Active Developer Wallets: 2,450 (+8%)"
+            ],
+            "market_intel": [
+              "Helius Blog: AI agents can now self-fund their API keys via CLI",
+              "Anatoly Twitter: Discussion on agent-centric design patterns for Solana programs"
+            ]
+          },
+          "novelty_score": 9
+        },
+        {
+          "narrative_name": "Solana's SVM as a Modular, Pluggable Execution Layer",
+          "explanation": "The Solana Virtual Machine (SVM) is evolving beyond a monolithic mainnet execution environment to become a versatile, pluggable execution layer for custom rollups and specialized blockchain instances. This modularity, enabled by initiatives like Firedancer and critical scaling technologies such as ZK-compression, positions Solana as a foundational 'execution-as-a-service' provider, allowing developers to leverage its high performance and robust tooling within a multi-chain or application-specific context.",
+          "evidence": {
+            "github": [
+              "firedancer-io/firedancer (1395 stars, C): Firedancer is Jump Crypto's Solana validator software."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Messari Report: Solana SVM becoming a pluggable execution layer for custom rollups",
+              "Firedancer Team: Modular validator architecture allowing specialized SVM implementations",
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 7.2
+        },
+        {
+          "narrative_name": "Hyper-Efficient On-Chain State Management with ZK-Compression",
+          "explanation": "The widespread and significant adoption of ZK-compression on Solana is fundamentally changing the economics and scalability of managing state on-chain. This technology dramatically reduces the cost and footprint of storing and updating large datasets, unlocking entirely new categories of applications that were previously impractical due to prohibitive on-chain storage costs or throughput limitations. This enables a new generation of data-intensive dApps and high-frequency, complex on-chain operations.",
+          "evidence": {
+            "github": [
+              "solana-developers/program-examples (1365 stars, TypeScript): A repository of Solana program examples (implying exploration of new program designs leveraging efficiency)",
+              "solana-web3.js (2699 stars, TypeScript) and solana-py (1424 stars, Python) usage indicates developers are actively building and interacting with Solana's evolving state management."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 6.2
+        }
+      ],
+      "metrics": {
+        "simulated": true
+      }
+    },
+    {
+      "timestamp": "2026-02-11T05:39:30.738440",
+      "narratives": [
+        {
+          "narrative_name": "The Rise of Autonomous On-Chain AI Agents",
+          "explanation": "Solana is transitioning from a platform for traditional smart contracts to a bustling ecosystem for autonomous, self-funding AI agents. This shift is driven by Solana's inherent speed and low transaction costs, combined with new architectural patterns and developer tooling that empower AI entities to execute complex strategies, manage their own resources, and interact with the blockchain as first-class participants. This creates a new paradigm for decentralized automation and intelligent applications.",
+          "evidence": {
+            "github": [
+              "Drakkar-Software/OctoBot (5206 stars, Python): Free open source crypto trading bot to automate AI...",
+              "AV1080p/Solana-Sniper-Bot (1921 stars, Rust): solana sniper bot...",
+              "x89/Solana-Arbitrage-Bot (1136 stars, Rust): Solana Arbitrage Bot..."
+            ],
+            "onchain": [
+              "New Program Deployments: 142 (+12%)",
+              "Active Developer Wallets: 2,450 (+8%)"
+            ],
+            "market_intel": [
+              "Helius Blog: AI agents can now self-fund their API keys via CLI",
+              "Anatoly Twitter: Discussion on agent-centric design patterns for Solana programs"
+            ]
+          },
+          "novelty_score": 9
+        },
+        {
+          "narrative_name": "Solana's SVM as a Modular, Pluggable Execution Layer",
+          "explanation": "The Solana Virtual Machine (SVM) is evolving beyond a monolithic mainnet execution environment to become a versatile, pluggable execution layer for custom rollups and specialized blockchain instances. This modularity, enabled by initiatives like Firedancer and critical scaling technologies such as ZK-compression, positions Solana as a foundational 'execution-as-a-service' provider, allowing developers to leverage its high performance and robust tooling within a multi-chain or application-specific context.",
+          "evidence": {
+            "github": [
+              "firedancer-io/firedancer (1395 stars, C): Firedancer is Jump Crypto's Solana validator software."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Messari Report: Solana SVM becoming a pluggable execution layer for custom rollups",
+              "Firedancer Team: Modular validator architecture allowing specialized SVM implementations",
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 8
+        },
+        {
+          "narrative_name": "Hyper-Efficient On-Chain State Management with ZK-Compression",
+          "explanation": "The widespread and significant adoption of ZK-compression on Solana is fundamentally changing the economics and scalability of managing state on-chain. This technology dramatically reduces the cost and footprint of storing and updating large datasets, unlocking entirely new categories of applications that were previously impractical due to prohibitive on-chain storage costs or throughput limitations. This enables a new generation of data-intensive dApps and high-frequency, complex on-chain operations.",
+          "evidence": {
+            "github": [
+              "solana-developers/program-examples (1365 stars, TypeScript): A repository of Solana program examples (implying exploration of new program designs leveraging efficiency)",
+              "solana-web3.js (2699 stars, TypeScript) and solana-py (1424 stars, Python) usage indicates developers are actively building and interacting with Solana's evolving state management."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 7
+        }
+      ],
+      "metrics": {
+        "simulated": true
+      }
+    },
+    {
+      "timestamp": "2026-02-11T05:39:30.738954",
+      "narratives": [
+        {
+          "narrative_name": "The Rise of Autonomous On-Chain AI Agents",
+          "explanation": "Solana is transitioning from a platform for traditional smart contracts to a bustling ecosystem for autonomous, self-funding AI agents. This shift is driven by Solana's inherent speed and low transaction costs, combined with new architectural patterns and developer tooling that empower AI entities to execute complex strategies, manage their own resources, and interact with the blockchain as first-class participants. This creates a new paradigm for decentralized automation and intelligent applications.",
+          "evidence": {
+            "github": [
+              "Drakkar-Software/OctoBot (5206 stars, Python): Free open source crypto trading bot to automate AI...",
+              "AV1080p/Solana-Sniper-Bot (1921 stars, Rust): solana sniper bot...",
+              "x89/Solana-Arbitrage-Bot (1136 stars, Rust): Solana Arbitrage Bot..."
+            ],
+            "onchain": [
+              "New Program Deployments: 142 (+12%)",
+              "Active Developer Wallets: 2,450 (+8%)"
+            ],
+            "market_intel": [
+              "Helius Blog: AI agents can now self-fund their API keys via CLI",
+              "Anatoly Twitter: Discussion on agent-centric design patterns for Solana programs"
+            ]
+          },
+          "novelty_score": 9
+        },
+        {
+          "narrative_name": "Solana's SVM as a Modular, Pluggable Execution Layer",
+          "explanation": "The Solana Virtual Machine (SVM) is evolving beyond a monolithic mainnet execution environment to become a versatile, pluggable execution layer for custom rollups and specialized blockchain instances. This modularity, enabled by initiatives like Firedancer and critical scaling technologies such as ZK-compression, positions Solana as a foundational 'execution-as-a-service' provider, allowing developers to leverage its high performance and robust tooling within a multi-chain or application-specific context.",
+          "evidence": {
+            "github": [
+              "firedancer-io/firedancer (1395 stars, C): Firedancer is Jump Crypto's Solana validator software."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Messari Report: Solana SVM becoming a pluggable execution layer for custom rollups",
+              "Firedancer Team: Modular validator architecture allowing specialized SVM implementations",
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 8
+        },
+        {
+          "narrative_name": "Hyper-Efficient On-Chain State Management with ZK-Compression",
+          "explanation": "The widespread and significant adoption of ZK-compression on Solana is fundamentally changing the economics and scalability of managing state on-chain. This technology dramatically reduces the cost and footprint of storing and updating large datasets, unlocking entirely new categories of applications that were previously impractical due to prohibitive on-chain storage costs or throughput limitations. This enables a new generation of data-intensive dApps and high-frequency, complex on-chain operations.",
+          "evidence": {
+            "github": [
+              "solana-developers/program-examples (1365 stars, TypeScript): A repository of Solana program examples (implying exploration of new program designs leveraging efficiency)",
+              "solana-web3.js (2699 stars, TypeScript) and solana-py (1424 stars, Python) usage indicates developers are actively building and interacting with Solana's evolving state management."
+            ],
+            "onchain": [
+              "ZK-Compression Usage: Significant Spike (+45%)"
+            ],
+            "market_intel": [
+              "Light Protocol Announcement: ZK-compression officially live, enabling massive state scaling"
+            ]
+          },
+          "novelty_score": 7
+        }
+      ],
+      "metrics": {
+        "simulated": true
+      }
+    }
+  ]
+}
