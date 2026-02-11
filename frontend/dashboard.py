@@ -32,9 +32,9 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Space+Mono:wght@400;700&display=swap');
 
     .stApp {
-        background: #0a0a0a;
-        color: #ffffff;
-        font-family: 'Space Mono', monospace;
+        background: #f5f1e8;
+        color: #1a1a1a;
+        font-family: 'Inter', sans-serif;
     }
 
     .main-title {
@@ -50,25 +50,25 @@ st.markdown("""
     }
 
     .narrative-card {
-        background: #1a1a1a;
-        border: 4px solid #000000;
+        background: #ffffff;
+        border: 5px solid #000000;
         padding: 30px;
         margin-bottom: 30px;
-        box-shadow: 10px 10px 0px #14F195;
+        box-shadow: 10px 10px 0px #9945FF;
         transition: all 0.15s ease;
     }
 
     .narrative-card:hover {
         transform: translate(-3px, -3px);
-        box-shadow: 13px 13px 0px #14F195;
+        box-shadow: 13px 13px 0px #9945FF;
     }
 
     .idea-card {
-        background: #1a1a1a;
-        border: 3px solid #000000;
+        background: #fff9f0;
+        border: 4px solid #000000;
         padding: 24px;
         margin-top: 15px;
-        box-shadow: 7px 7px 0px #9945FF;
+        box-shadow: 7px 7px 0px #FF6B9D;
         transition: all 0.15s ease;
         display: flex;
         flex-direction: column;
@@ -79,11 +79,11 @@ st.markdown("""
 
     .idea-card:hover {
         transform: translate(-2px, -2px);
-        box-shadow: 10px 10px 0px #9945FF;
+        box-shadow: 10px 10px 0px #FF6B9D;
     }
 
     .badge {
-        background: #14F195;
+        background: #FFD93D;
         color: #000000;
         padding: 8px 16px;
         border: 3px solid #000000;
@@ -93,7 +93,7 @@ st.markdown("""
         letter-spacing: 1px;
         display: inline-block;
         margin-right: 10px;
-        box-shadow: 3px 3px 0px #000000;
+        box-shadow: 4px 4px 0px #000000;
     }
 
     .trend-indicator {
@@ -103,66 +103,69 @@ st.markdown("""
         text-transform: uppercase;
         letter-spacing: 2px;
         padding: 8px 16px;
-        border: 3px solid currentColor;
+        border: 3px solid #000000;
         display: inline-block;
-        box-shadow: 4px 4px 0px currentColor;
+        box-shadow: 4px 4px 0px #000000;
+        color: #000000;
     }
 
     .rising {
-        color: #14F195;
-        background: rgba(20, 241, 149, 0.1);
+        background: #14F195;
     }
     .falling {
-        color: #FF4444;
-        background: rgba(255, 68, 68, 0.1);
+        background: #FF6B6B;
     }
     .stable {
-        color: #FFD700;
-        background: rgba(255, 215, 0, 0.1);
+        background: #FFD93D;
     }
     .new-badge {
-        color: #9945FF;
-        background: rgba(153, 69, 255, 0.1);
+        background: #C77DFF;
     }
 
     .sentiment-positive {
-        color: #14F195;
+        background: #14F195;
+        color: #000000;
         font-weight: 900;
         text-transform: uppercase;
-        border: 2px solid #14F195;
-        padding: 4px 8px;
-        background: rgba(20, 241, 149, 0.1);
+        border: 3px solid #000000;
+        padding: 6px 12px;
+        box-shadow: 3px 3px 0px #000000;
+        display: inline-block;
     }
     .sentiment-negative {
-        color: #FF4444;
+        background: #FF6B6B;
+        color: #000000;
         font-weight: 900;
         text-transform: uppercase;
-        border: 2px solid #FF4444;
-        padding: 4px 8px;
-        background: rgba(255, 68, 68, 0.1);
+        border: 3px solid #000000;
+        padding: 6px 12px;
+        box-shadow: 3px 3px 0px #000000;
+        display: inline-block;
     }
     .sentiment-neutral {
-        color: #FFD700;
+        background: #FFD93D;
+        color: #000000;
         font-weight: 900;
         text-transform: uppercase;
-        border: 2px solid #FFD700;
-        padding: 4px 8px;
-        background: rgba(255, 215, 0, 0.1);
+        border: 3px solid #000000;
+        padding: 6px 12px;
+        box-shadow: 3px 3px 0px #000000;
+        display: inline-block;
     }
 
     .refresh-indicator {
         position: fixed;
         top: 60px;
         right: 30px;
-        background: #14F195;
+        background: #70D6FF;
         color: #000000;
-        border: 3px solid #000000;
+        border: 4px solid #000000;
         padding: 12px 24px;
         font-size: 0.8rem;
-        font-family: 'Space Mono', monospace;
-        font-weight: 700;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 900;
         z-index: 1000;
-        box-shadow: 5px 5px 0px #000000;
+        box-shadow: 6px 6px 0px #000000;
         text-transform: uppercase;
     }
 
@@ -170,14 +173,33 @@ st.markdown("""
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 900;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
+        color: #1a1a1a;
     }
 
     h2 {
-        color: #14F195;
-        border-left: 6px solid #14F195;
-        padding-left: 20px;
+        background: #FF6B9D;
+        color: #000000;
+        padding: 12px 20px;
+        border: 4px solid #000000;
+        box-shadow: 6px 6px 0px #000000;
+        display: inline-block;
         margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* Sidebar styling */
+    [data-testid="stSidebar"] {
+        background: #ffffff !important;
+        border-right: 5px solid #000000 !important;
+    }
+
+    /* Metric cards */
+    [data-testid="metric-container"] {
+        background: #ffffff !important;
+        border: 4px solid #000000 !important;
+        box-shadow: 5px 5px 0px #000000 !important;
+        padding: 15px !important;
     }
     </style>
     """, unsafe_allow_html=True)
