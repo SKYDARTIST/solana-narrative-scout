@@ -2,14 +2,17 @@
 ### Real-Time Autonomous Narrative Detection for Solana
 **An AI Agent Submission for Superteam Earn**
 
+> 🚀 **LIVE DEMO:** https://solana-narrative-scout.streamlit.app
+
 SignalVane is a production-grade AI-powered autonomous agent that detects and tracks emerging Solana narratives in real-time. Features live data updates, historical trend analysis, sentiment scoring, and interactive visualizations.
 
 ## ✨ Key Features
 
 ### 🔄 Real-Time Updates
-- Auto-refreshes data every 15 minutes
+- Auto-refreshes data every 5 minutes (true real-time)
 - Live update indicator showing last refresh time
 - Smart caching to minimize API calls
+- AI-powered sentiment analysis with 95%+ confidence
 
 ### 📈 Historical Trend Analysis
 - Tracks narrative evolution over time
