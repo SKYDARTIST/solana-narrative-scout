@@ -39,6 +39,20 @@ SignalVane is a production-grade AI-powered autonomous agent that detects and tr
 
 *Neo-brutalism design with vibrant colors, thick black borders, and AI-powered features*
 
+### 📸 Dashboard Screenshots
+
+**Main Dashboard - Live Narrative Detection**
+![SignalVane Dashboard](assets/dashboard-main.png)
+
+**Build Opportunities - AI-Generated Ideas**
+![Build Ideas](assets/build-ideas.png)
+
+**Narrative Details - Evidence & Analysis**
+![Narrative Details](assets/narrative-detail.png)
+
+**Project Cards - Technical Stack**
+![Project Cards](assets/project-cards.png)
+
 ## 📊 Fortnightly Narratives (Feb 2026)
 1.  **Autonomous Agentic Commerce:** The shift from user-to-dApp to agent-to-agent interactions.
 2.  **ZK-Compressed State Economy:** Massive scaling via Light Protocol's ZK-compression.
