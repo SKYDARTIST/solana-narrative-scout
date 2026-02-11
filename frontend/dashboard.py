@@ -26,192 +26,222 @@ st.set_page_config(
 # Auto-refresh configuration
 REFRESH_INTERVAL = 300  # 5 minutes in seconds (truly real-time)
 
-# Custom CSS for Neo-Brutalism Style (No Emojis)
+# Custom CSS for High-Fidelity Neo-Brutalist Style
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Space+Mono:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
 
+    /* Global App Background */
     .stApp {
-        background: #f5f1e8;
-        color: #1a1a1a;
+        background: #FFFFE0 !important;
+        color: #000000 !important;
         font-family: 'Inter', sans-serif;
     }
 
+    /* Remove Streamlit default padding */
+    .block-container {
+        padding-top: 2rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    /* Main Title Styling */
     .main-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Outfit', sans-serif;
         font-weight: 900;
-        font-size: 3.5rem;
-        letter-spacing: -2px;
-        color: #14F195;
+        font-size: 5rem;
+        letter-spacing: -4px;
+        color: #000000;
         text-transform: uppercase;
-        border-bottom: 6px solid #14F195;
-        padding-bottom: 10px;
+        line-height: 0.85;
+        margin-bottom: 10px;
+    }
+
+    .subtitle-badge {
+        font-family: 'Space Mono', monospace;
+        font-size: 14px;
+        background: #14F195;
+        display: inline-block;
+        padding: 6px 15px;
+        border: 3px solid #000000;
+        box-shadow: 4px 4px 0px #000000;
+        font-weight: 700;
+        text-transform: uppercase;
         margin-bottom: 20px;
     }
 
+    /* Metrics Bar */
+    .metrics-container {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .metric-card {
+        background: #ffffff;
+        border: 4px solid #000000;
+        padding: 20px 30px;
+        box-shadow: 8px 8px 0px #000000;
+        min-width: 180px;
+        flex: 1;
+    }
+
+    .metric-label {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #444;
+        margin-bottom: 5px;
+    }
+
+    .metric-value {
+        font-family: 'Outfit', sans-serif;
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    /* Narrative Map Card */
     .narrative-card {
         background: #ffffff;
-        border: 5px solid #000000;
-        padding: 30px;
-        margin-bottom: 30px;
-        box-shadow: 10px 10px 0px #9945FF;
-        transition: all 0.15s ease;
-    }
-
-    .narrative-card:hover {
-        transform: translate(-3px, -3px);
-        box-shadow: 13px 13px 0px #9945FF;
-    }
-
-    .idea-card {
-        background: #fff9f0;
         border: 4px solid #000000;
-        padding: 24px;
-        margin-top: 15px;
-        box-shadow: 7px 7px 0px #FF6B9D;
-        transition: all 0.15s ease;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        min-height: 480px;
+        padding: 0; /* Header handles padding */
+        margin-bottom: 40px;
+        box-shadow: 12px 12px 0px #000000;
+        transition: all 0.2s ease;
         overflow: hidden;
     }
 
-    .idea-card:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 10px 10px 0px #FF6B9D;
+    .narrative-header {
+        background: #FF007F;
+        color: #ffffff;
+        padding: 25px 30px;
+        border-bottom: 4px solid #000000;
     }
 
-    .badge {
-        background: #FFD93D;
-        color: #000000;
-        padding: 8px 16px;
-        border: 3px solid #000000;
-        font-size: 0.75rem;
+    .narrative-header h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 32px;
         font-weight: 900;
+        margin: 0;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        display: inline-block;
-        margin-right: 10px;
-        box-shadow: 4px 4px 0px #000000;
+        color: white !important;
     }
 
-    .trend-indicator {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 900;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: 8px 16px;
-        border: 3px solid #000000;
-        display: inline-block;
-        box-shadow: 4px 4px 0px #000000;
-        color: #000000;
+    .narrative-body {
+        padding: 30px;
     }
 
-    .rising {
-        background: #14F195;
-    }
-    .falling {
-        background: #FF6B6B;
-    }
-    .stable {
-        background: #FFD93D;
-    }
-    .new-badge {
-        background: #C77DFF;
+    .narrative-body p {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #000000 !important;
     }
 
-    .sentiment-positive {
-        background: #14F195;
-        color: #000000;
-        font-weight: 900;
-        text-transform: uppercase;
-        border: 3px solid #000000;
-        padding: 6px 12px;
-        box-shadow: 3px 3px 0px #000000;
-        display: inline-block;
-    }
-    .sentiment-negative {
-        background: #FF6B6B;
-        color: #000000;
-        font-weight: 900;
-        text-transform: uppercase;
-        border: 3px solid #000000;
-        padding: 6px 12px;
-        box-shadow: 3px 3px 0px #000000;
-        display: inline-block;
-    }
-    .sentiment-neutral {
-        background: #FFD93D;
-        color: #000000;
-        font-weight: 900;
-        text-transform: uppercase;
-        border: 3px solid #000000;
-        padding: 6px 12px;
-        box-shadow: 3px 3px 0px #000000;
-        display: inline-block;
-    }
-
-    .refresh-indicator {
-        position: fixed;
-        top: 60px;
-        right: 30px;
-        background: #70D6FF;
-        color: #000000;
-        border: 4px solid #000000;
-        padding: 12px 24px;
-        font-size: 0.8rem;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 900;
-        z-index: 1000;
-        box-shadow: 6px 6px 0px #000000;
-        text-transform: uppercase;
-    }
-
-    h1, h2, h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0px;
-        color: #1a1a1a;
-    }
-
-    h2 {
-        background: #FF6B9D;
-        color: #000000;
-        padding: 12px 20px;
-        border: 4px solid #000000;
-        box-shadow: 6px 6px 0px #000000;
-        display: inline-block;
+    /* Signals Section */
+    .signals-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
         margin-top: 30px;
-        margin-bottom: 20px;
+        padding-top: 30px;
+        border-top: 4px solid #000000;
     }
 
-    /* Sidebar styling */
+    .signal-box h4 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0 0 15px 0;
+        background: #FFEE00;
+        display: inline-block;
+        padding: 4px 10px;
+        border: 3px solid #000000;
+        box-shadow: 3px 3px 0px #000000;
+    }
+
+    /* Opportunity Cards (Idea Cards) */
+    .sub-section-header {
+        font-family: 'Outfit', sans-serif;
+        font-size: 26px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        padding-left: 15px;
+        border-left: 10px solid #9945FF;
+        line-height: 1;
+    }
+
+    .idea-card {
+        background: #ffffff;
+        border: 4px solid #000000;
+        padding: 25px;
+        margin-top: 0px;
+        box-shadow: 8px 8px 0px #000000;
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 580px !important; /* Increased for chunky look and consistency */
+    }
+
+    .idea-card:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 11px 11px 0px #000000;
+    }
+
+    .idea-card h4 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 22px;
+        margin: 0 0 15px 0;
+        color: #000000 !important;
+    }
+
+    .tech-stack-box {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        background: #f0f0f0;
+        padding: 6px;
+        border: 2px solid #000000;
+        margin-top: auto;
+    }
+
+    /* Sidebar Refinement */
     [data-testid="stSidebar"] {
         background: #ffffff !important;
         border-right: 5px solid #000000 !important;
     }
 
-    /* Metric cards */
-    [data-testid="metric-container"] {
-        background: #ffffff !important;
-        border: 4px solid #000000 !important;
-        box-shadow: 5px 5px 0px #000000 !important;
-        padding: 15px !important;
+    .stMultiSelect div[role="listbox"] {
+        border: 3px solid #000000 !important;
+        box-shadow: 4px 4px 0px #000000 !important;
     }
 
-    /* Fix text visibility */
-    .narrative-card p, .narrative-card li, .narrative-card div {
-        color: #1a1a1a !important;
+    /* Status Indicator */
+    .refresh-indicator {
+        background: #000000;
+        color: #ffffff;
+        border: 3px solid #000000;
+        padding: 10px 20px;
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 12px;
+        box-shadow: 5px 5px 0px #FF007F;
     }
 
-    .idea-card p, .idea-card div {
-        color: #1a1a1a !important;
+    /* Utility */
+    .brutalist-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border: 2px solid #000000;
+        background: #FFEE00;
+        color: #000000; /* Ensure text is visible on yellow/white */
+        font-weight: 900;
+        font-size: 11px;
+        margin-bottom: 10px;
+        box-shadow: 3px 3px 0px #000000;
     }
 
-    /* Equal height columns - FIXED */
+    /* Force Equal Height Columns */
     [data-testid="column"] {
         display: flex !important;
         flex-direction: column !important;
@@ -223,32 +253,16 @@ st.markdown("""
         flex-direction: column !important;
     }
 
-    /* Make all idea cards same height */
-    .idea-card {
-        flex: 1 !important;
-        min-height: 550px !important;
-    }
-
     /* Equal height for horizontal blocks */
     [data-testid="stHorizontalBlock"] {
         display: flex !important;
         align-items: stretch !important;
     }
 
-    /* Responsive text sizing */
-    @media (max-width: 1200px) {
-        .main-title {
-            font-size: 2.5rem;
-        }
-        .idea-card {
-            min-height: 450px !important;
-        }
-    }
-
-    /* Force dark text in all cards */
-    .stMarkdown, .stMarkdown p, .stMarkdown div {
-        color: #1a1a1a;
-    }
+    /* Hide standard Streamlit header */
+    header { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
+    footer { visibility: hidden; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -344,31 +358,49 @@ def main():
     tracker = HistoricalTracker()
     trends = tracker.get_all_trends()
 
-    # Header section with custom title
+    # Header section with High-Fidelity Branding
     st.markdown("""
-        <div class="title-container">
-            <h1 class="main-title">SIGNALVANE</h1>
-            <p style='color: #888888; letter-spacing: 2px; font-weight: 500;'>AUTONOMOUS NARRATIVE SCOUT / SOLANA</p>
-        </div>
-    """, unsafe_allow_html=True)
+<div style="margin-bottom: 20px;">
+<div class="subtitle-badge">AUTONOMOUS NARRATIVE SCOUT / SOLANA</div>
+<h1 class="main-title">SIGNALVANE</h1>
+</div>
+""", unsafe_allow_html=True)
 
-    # Last updated indicator
+    # Last updated indicator (Neo-Brutalist style)
     minutes_ago = int(minutes_since) if minutes_since else 0
     st.markdown(f"""
-        <div class="refresh-indicator">
-            LAST SYNC: {minutes_ago}m AGO
-            <span style='color: {"#14F195" if minutes_ago < 5 else "#888888"}; margin-left: 10px;'>
-                {"ACTIVE" if minutes_ago < 5 else "STALE"}
-            </span>
-        </div>
-    """, unsafe_allow_html=True)
+<div style="display: flex; justify-content: flex-end; margin-top: -80px; margin-bottom: 40px;">
+<div class="refresh-indicator">
+SYNC: {minutes_ago}m AGO | <span style='color: {"#14F195" if minutes_ago < 5 else "#888888"};'>{"ACTIVE" if minutes_ago < 5 else "STALE"}</span>
+</div>
+</div>
+""", unsafe_allow_html=True)
 
-    # Metrics with cleaner appearance
-    met1, met2, met3, met4 = st.columns(4)
-    met1.metric("PROGRAMS (14D)", "142", "12%")
-    met2.metric("DEV DENSITY", "2,450", "8%")
-    met3.metric("ZK MOMENTUM", "45%", "PEAK")
-    met4.metric("NARRATIVES", len(narratives), f"{len([t for t in trends.values() if t == 'rising'])} TRENDING")
+    # Metrics Bar (Custom HTML for Neo-Brutalist look)
+    st.markdown(f"""
+<div class="metrics-container">
+<div class="metric-card">
+<div class="metric-label">PROGRAMS (14D)</div>
+<div class="metric-value">142</div>
+<div style="font-size: 11px; font-weight: 800; color: #14F195; margin-top: 5px;">↑ 12%</div>
+</div>
+<div class="metric-card">
+<div class="metric-label">DEV DENSITY</div>
+<div class="metric-value">2,450</div>
+<div style="font-size: 11px; font-weight: 800; color: #14F195; margin-top: 5px;">↑ 8%</div>
+</div>
+<div class="metric-card">
+<div class="metric-label">ZK MOMENTUM</div>
+<div class="metric-value">45%</div>
+<div style="font-size: 11px; font-weight: 800; color: #9945FF; margin-top: 5px;">PEAK</div>
+</div>
+<div class="metric-card">
+<div class="metric-label">NARRATIVES</div>
+<div class="metric-value">{len(narratives):02d}</div>
+<div style="font-size: 11px; font-weight: 800; color: #14F195; margin-top: 5px;">{len([t for t in trends.values() if t == 'rising'])} TRENDING</div>
+</div>
+</div>
+""", unsafe_allow_html=True)
 
     # Sidebar filters (e-free)
     st.sidebar.markdown("<h3 style='font-family:Outfit;'>FILTERS</h3>", unsafe_allow_html=True)
@@ -394,6 +426,24 @@ def main():
     st.sidebar.markdown("<p style='color:#888888; font-size: 0.8rem;'>SIGNAL SOURCES</p>", unsafe_allow_html=True)
     st.sidebar.text("GitHub API, Reddit, On-Chain")
     st.sidebar.markdown(f"<p style='color:#444444; font-size: 0.75rem;'>SYNC: {snapshot['timestamp'][:16]}<br>T-MINUS: {max(0, 5 - minutes_ago)} MIN</p>", unsafe_allow_html=True)
+
+    st.sidebar.markdown("""
+<div style="background: #9945FF; color: white; border: 3px solid black; padding: 10px; font-family: 'Outfit'; font-weight: 800; font-size: 14px; box-shadow: 4px 4px 0px black; text-align: center; text-transform: uppercase; margin-bottom: 15px;">
+BUILT BY AAKASH
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+    <a href="https://x.com/Cryptobullaaa" target="_blank" style="text-decoration: none;">
+        <div style="background: #FFEE00; color: black; border: 2px solid black; padding: 8px; font-family: 'Space Mono'; font-weight: 700; font-size: 12px; box-shadow: 3px 3px 0px black; text-align: center;">
+            X / CRYPTOBULLAAA
+        </div>
+    </a>
+    <a href="https://github.com/SKYDARTIST" target="_blank" style="text-decoration: none;">
+        <div style="background: white; color: black; border: 2px solid black; padding: 8px; font-family: 'Space Mono'; font-weight: 700; font-size: 12px; box-shadow: 3px 3px 0px black; text-align: center;">
+            GH / SKYDARTIST
+        </div>
+    </a>
+</div>
+""", unsafe_allow_html=True)
 
     # Main content
     st.markdown("<h3 style='font-family:Outfit; margin-bottom: 30px;'>LIVE NARRATIVE MAP</h3>", unsafe_allow_html=True)
@@ -428,34 +478,38 @@ def main():
             sentiment, _ = get_sentiment_score(narrative)
 
             st.markdown(f"""
-                <div class="narrative-card">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-                        <div>
-                            <span class="badge" style="background: rgba(153, 69, 255, 0.1); color: #9945FF; border-color: rgba(153, 69, 255, 0.3);">NOVELTY: {narrative['novelty_score']}</span>
-                            <span class="badge" style='background: rgba(255,255,255,0.05); color: #888888; border-color: rgba(255,255,255,0.1);'>{sentiment.upper()}</span>
-                        </div>
-                        <div class="trend-indicator {trend_class}">
-                            {trend_label}
-                        </div>
-                    </div>
-                    <h2 style='font-family: Outfit; font-weight: 800; color:white; margin: 0 0 15px 0;'>{narrative['narrative_name'].upper()}</h2>
-                    <p style='font-size: 1.1rem; color: #adb5bd; line-height: 1.6;'>{narrative['explanation']}</p>
-                    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05);'>
-                        <div>
-                            <p style='color:#14F195; font-size: 0.75rem; font-weight:800; letter-spacing: 1px; margin-bottom: 12px;'>GITHUB SIGNALS</p>
-                            <ul style='font-size: 0.9rem; color: #888888; padding-left: 20px;'>
-                                {"".join([f"<li style='margin-bottom:8px;'>{e}</li>" for e in narrative['evidence']['github']])}
-                            </ul>
-                        </div>
-                        <div>
-                            <p style='color:#14F195; font-size: 0.75rem; font-weight:800; letter-spacing: 1px; margin-bottom: 12px;'>MARKET INTEL</p>
-                            <ul style='font-size: 0.9rem; color: #888888; padding-left: 20px;'>
-                                {"".join([f"<li style='margin-bottom:8px;'>{e}</li>" for e in narrative['evidence']['market_intel']])}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            """, unsafe_allow_html=True)
+<div class="narrative-card">
+<div class="narrative-header">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+<div>
+<span class="brutalist-badge">NOVELTY: {narrative['novelty_score']}</span>
+<span class="brutalist-badge" style="background: white;">{sentiment.upper()}</span>
+</div>
+<div style="background: white; border: 3px solid black; padding: 4px 10px; font-weight: 900; box-shadow: 3px 3px 0px black; color: black; font-family: 'Space Mono';">
+{trend_label}
+</div>
+</div>
+<h2 style='color: white !important;'>{narrative['narrative_name'].upper()}</h2>
+</div>
+<div class="narrative-body">
+<p>{narrative['explanation']}</p>
+<div class="signals-grid">
+<div class="signal-box">
+<h4>GitHub Signals</h4>
+<ul style='font-size: 0.9rem; color: #000; padding-left: 20px; font-family: "Inter";'>
+{"".join([f"<li style='margin-bottom:8px; border-bottom: 1px dashed black; padding-bottom: 4px;'>{e}</li>" for e in narrative['evidence']['github']])}
+</ul>
+</div>
+<div class="signal-box">
+<h4>Market Intel</h4>
+<ul style='font-size: 0.9rem; color: #000; padding-left: 20px; font-family: "Inter";'>
+{"".join([f"<li style='margin-bottom:8px; border-bottom: 1px dashed black; padding-bottom: 4px;'>{e}</li>" for e in narrative['evidence']['market_intel']])}
+</ul>
+</div>
+</div>
+</div>
+</div>
+""", unsafe_allow_html=True)
 
             # Trend chart
             trend_chart = create_trend_chart(narrative['narrative_name'], tracker)
@@ -464,26 +518,26 @@ def main():
                     st.plotly_chart(trend_chart, use_container_width=True)
 
             # Ideas
-            st.markdown(f"<p style='color: #444444; font-weight: 800; letter-spacing: 1px; margin: 20px 0;'>BUILD OPPORTUNITIES / {narrative['narrative_name'].upper()}</p>", unsafe_allow_html=True)
+            st.markdown(f"<div class='sub-section-header'>BUILD OPPORTUNITIES / {narrative['narrative_name'].upper()}</div>", unsafe_allow_html=True)
             narrative_ideas = next((item for item in ideas if item["narrative_name"] == narrative["narrative_name"]), None)
             if narrative_ideas:
                 cols = st.columns(3)
                 for i, idea in enumerate(narrative_ideas["ideas"]):
                     with cols[i % 3]:
                         st.markdown(f"""
-                            <div class="idea-card">
-                                <h4 style='font-family: Outfit; font-weight: 800; color:white; margin: 0 0 15px 0;'>{idea['title'].upper()}</h4>
-                                <div style='flex-grow: 1;'>
-                                    <p style='font-size:0.95rem; color: #888888; line-height:1.5;'>{idea['description']}</p>
-                                </div>
-                                <div style='margin-top:15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top:15px;'>
-                                    <p style='color: #444444; font-size: 0.65rem; font-weight: 800; margin-bottom: 2px;'>TARGET</p>
-                                    <p style='font-size:0.85rem; color: #bbb; margin-bottom:10px;'>{idea['target_user']}</p>
-                                    <p style='color: #444444; font-size: 0.65rem; font-weight: 800; margin-bottom: 2px;'>STACK</p>
-                                    <p style='font-size:0.8rem; font-family: Space Mono; color: #9945FF;'>{idea['tech_stack']}</p>
-                                </div>
-                            </div>
-                        """, unsafe_allow_html=True)
+<div class="idea-card">
+<h4>{idea['title'].upper()}</h4>
+<div style='flex-grow: 1;'>
+<p style='font-size:0.95rem; line-height:1.4;'>{idea['description']}</p>
+</div>
+<div style='margin-top:20px; border-top: 1px solid black; padding-top:15px;'>
+<div class="brutalist-badge" style="background: #9945FF; color: white;">TARGET</div>
+<p style='font-size:0.9rem; margin-bottom:15px; font-weight: 700;'>{idea['target_user']}</p>
+<div class="brutalist-badge">STACK</div>
+<div class="tech-stack-box">{idea['tech_stack']}</div>
+</div>
+</div>
+""", unsafe_allow_html=True)
             st.markdown("<br><br>", unsafe_allow_html=True)
 
     if not filtered_narratives:

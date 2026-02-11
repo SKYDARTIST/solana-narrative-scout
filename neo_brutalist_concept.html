@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalVane Neo-Brutalist Concept</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&family=Space+Mono:wght@700&family=Inter:wght@900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FFFFE0;
+            --black: #000000;
+            --pink: #FF007F;
+            --yellow: #FFEE00;
+            --green: #14F195;
+            --purple: #9945FF;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: var(--black);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 80px;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 0.9;
+            letter-spacing: -4px;
+        }
+
+        .subtitle {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            margin-bottom: 50px;
+            background: var(--green);
+            display: inline-block;
+            padding: 5px 15px;
+            border: 3px solid var(--black);
+            box-shadow: 4px 4px 0px var(--black);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border: 4px solid var(--black);
+            padding: 30px;
+            box-shadow: 12px 12px 0px var(--black);
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 16px 16px 0px var(--black);
+        }
+
+        .card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 4px solid var(--black);
+            padding-bottom: 10px;
+        }
+
+        .card.featured {
+            grid-column: span 2;
+            background: var(--pink);
+            color: white;
+        }
+
+        .card.featured h2 {
+            border-color: white;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 2px solid var(--black);
+            background: var(--yellow);
+            font-weight: 900;
+            font-size: 14px;
+            margin-right: 10px;
+            box-shadow: 3px 3px 0px var(--black);
+        }
+
+        .stat-grid {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            border-top: 4px solid var(--black);
+            border-bottom: 4px solid var(--black);
+            padding: 20px 0;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-value {
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Outfit';
+        }
+
+        .stat-label {
+            font-family: 'Space Mono';
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: var(--black);
+            color: white;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            box-shadow: 6px 6px 0px var(--purple);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="subtitle">AUTONOMOUS NARRATIVE SCOUT / SOLANA</div>
+    <h1>SIGNALVANE</h1>
+
+    <div class="stat-grid">
+        <div class="stat-item">
+            <div class="stat-label">Programs (14d)</div>
+            <div class="stat-value">142</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">Zk Momentum</div>
+            <div class="stat-value">45%</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">Active Narratives</div>
+            <div class="stat-value">02</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card featured">
+            <div class="badge">NARRATIVE AT PEAK</div>
+            <h2>SOLANA'S SCALING REDEFINED: MASS ADOPTION OF ZK-COMPRESSED STATE</h2>
+            <p style="font-size: 18px; line-height: 1.4;">Solana is solidifying its position as a leading scalable
+                blockchain through the practical adoption of innovative technologies, most notably ZK-compression.</p>
+            <div class="btn">View Narrative Details</div>
+        </div>
+
+        <div class="card">
+            <div class="badge">OPPORTUNITY</div>
+            <h2>SOLANA SHARDVAULT</h2>
+            <p>Create and manage massive, ultra-low-cost NFT collections or dynamic in-game assets leveraging
+                ZK-compressed state.</p>
+            <p style="font-family: 'Space Mono'; font-size: 14px; margin-top: 20px;">
+                <strong>STACK:</strong> ANCHOR, TOKEN-2022, HELIUS
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="badge">OPPORTUNITY</div>
+            <h2>CHAINLOG FOR IOT</h2>
+            <p>An on-chain ledger designed for high-frequency, low-cost recording of sensor data, IoT device logs.</p>
+            <p style="font-family: 'Space Mono'; font-size: 14px; margin-top: 20px;">
+                <strong>STACK:</strong> RUST, ZK-COMPRESSION, DAS-API
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="badge" style="background: var(--purple); color: white;">NEW SIGNAL</div>
+            <h2>IMMUTABLE LOGBOOK</h2>
+            <p>Offer an enterprise-grade service for immutably storing auditable logs, compliance data, or system events
+                on Solana.</p>
+        </div>
+
+        <div class="card" style="background: var(--yellow);">
+            <div class="badge" style="background: white;">TRENDING</div>
+            <h2>SOLFEED PROFILES</h2>
+            <p>A platform enabling decentralized social media profiles and micro-posts where user data is stored
+                economically.</p>
+        </div>
+    </div>
+</body>
+
+</html>
