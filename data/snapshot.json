@@ -1,167 +1,37 @@
 {
-    "timestamp": "2026-02-11T02:27:28.867763",
-    "github_momentum": [
-        {
-            "name": "Drakkar-Software/OctoBot",
-            "stars": 5206,
-            "description": "Free open source crypto trading bot to automate AI, Grid, DCA and TradingView strategies on Binance, Hyperliquid and 15+ exchanges, with a simple interface.",
-            "url": "https://github.com/Drakkar-Software/OctoBot",
-            "language": "Python",
-            "updated_at": "2026-02-10T18:11:22Z"
-        },
-        {
-            "name": "solana-foundation/solana-web3.js",
-            "stars": 2699,
-            "description": "Solana JavaScript SDK",
-            "url": "https://github.com/solana-foundation/solana-web3.js",
-            "language": "TypeScript",
-            "updated_at": "2026-02-05T08:12:07Z"
-        },
-        {
-            "name": "OneKeyHQ/app-monorepo",
-            "stars": 2293,
-            "description": "Secure, open source and community driven crypto wallet runs on all platforms and trusted by millions.",
-            "url": "https://github.com/OneKeyHQ/app-monorepo",
-            "language": "TypeScript",
-            "updated_at": "2026-02-10T20:03:18Z"
-        },
-        {
-            "name": "AV1080p/Solana-Sniper-Bot",
-            "stars": 1921,
-            "description": "solana sniper bot solana sniper bot solana sniper bot solana sniper bot solana sniper bot https://t.me/av1080trading",
-            "url": "https://github.com/AV1080p/Solana-Sniper-Bot",
-            "language": "Rust",
-            "updated_at": "2026-01-30T18:07:15Z"
-        },
-        {
-            "name": "cake-tech/cake_wallet",
-            "stars": 1455,
-            "description": "The open source repository for Cake Wallet, a noncustodial multi-currency wallet, and Monero.com, a noncustodial Monero-only wallet. Need help? Check out https://docs.cakewallet.com",
-            "url": "https://github.com/cake-tech/cake_wallet",
-            "language": "Dart",
-            "updated_at": "2026-02-10T20:23:55Z"
-        },
-        {
-            "name": "michaelhly/solana-py",
-            "stars": 1424,
-            "description": "Solana Python SDK",
-            "url": "https://github.com/michaelhly/solana-py",
-            "language": "Python",
-            "updated_at": "2026-02-06T02:27:20Z"
-        },
-        {
-            "name": "firedancer-io/firedancer",
-            "stars": 1395,
-            "description": "Firedancer is Jump Crypto's Solana validator software.",
-            "url": "https://github.com/firedancer-io/firedancer",
-            "language": "C",
-            "updated_at": "2026-02-10T20:19:55Z"
-        },
-        {
-            "name": "solana-developers/program-examples",
-            "stars": 1365,
-            "description": "A repository of Solana program examples",
-            "url": "https://github.com/solana-developers/program-examples",
-            "language": "TypeScript",
-            "updated_at": "2026-02-09T19:38:25Z"
-        },
-        {
-            "name": "horizontalsystems/unstoppable-wallet-android",
-            "stars": 1149,
-            "description": "A powerful non-custodial multi-wallet for Bitcoin, Ethereum, Binance Smart Chain, Avalanche, Solana and other blockchains. Non-custodial crypto and NFT storage, onchain decentralized exchange, institutional grade analytics for cryptcurrency and NFT markets, extensive privacy controls and human oriented design. Implemented on Kotlin.",
-            "url": "https://github.com/horizontalsystems/unstoppable-wallet-android",
-            "language": "Kotlin",
-            "updated_at": "2026-02-10T12:01:38Z"
-        },
-        {
-            "name": "x89/Solana-Arbitrage-Bot",
-            "stars": 1136,
-            "description": "https://t.me/githubx89 Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot",
-            "url": "https://github.com/x89/Solana-Arbitrage-Bot",
-            "language": "Rust",
-            "updated_at": "2026-02-10T11:15:50Z"
-        },
-        {
-            "name": "ant-design/ant-design-web3",
-            "stars": 1125,
-            "description": "\ud83e\udd73 Efficient react components for building dapps easier | Connect crypto wallets and more Web3 UI components | Web3 icons | Supports Ethereum, Solana, Bitcoin, TON, Sui, TRON and others.",
-            "url": "https://github.com/ant-design/ant-design-web3",
-            "language": "TypeScript",
-            "updated_at": "2026-02-09T08:55:32Z"
-        },
-        {
-            "name": "solana-playground/solana-playground",
-            "stars": 914,
-            "description": "Quickly develop, deploy and test Solana programs from browsers",
-            "url": "https://github.com/solana-playground/solana-playground",
-            "language": "Rust",
-            "updated_at": "2026-02-10T03:31:26Z"
-        },
-        {
-            "name": "rpcpool/yellowstone-grpc",
-            "stars": 909,
-            "description": "Triton's Dragon's Mouth Yellowstone gRPC service for high-performance Solana streaming",
-            "url": "https://github.com/rpcpool/yellowstone-grpc",
-            "language": "Rust",
-            "updated_at": "2026-02-10T17:47:47Z"
-        },
-        {
-            "name": "chainstacklabs/pumpfun-bonkfun-bot",
-            "stars": 890,
-            "description": "A fully functional pump.fun / letsbonk.fun trading and sniping bot not relying on any 3rd party APIs",
-            "url": "https://github.com/chainstacklabs/pumpfun-bonkfun-bot",
-            "language": "Python",
-            "updated_at": "2026-02-09T12:59:49Z"
-        },
-        {
-            "name": "horizontalsystems/unstoppable-wallet-ios",
-            "stars": 853,
-            "description": "Multi-wallet for Bitcoin, Ethereum, Binance Smart Chain and other emerging blockchains. Non-custodial storage, decentralized exchange, and extensive analytics for thousands of tokens and NFTs. Implemented on Swift.",
-            "url": "https://github.com/horizontalsystems/unstoppable-wallet-ios",
-            "language": "Swift",
-            "updated_at": "2026-02-09T13:42:21Z"
-        }
+  "timestamp": "2026-02-11T11:00:07.380113",
+  "github_signals": 15,
+  "reddit_signals": 0,
+  "narratives_count": 2,
+  "metrics": [
+    {
+      "metric": "New Program Deployments",
+      "value": "142",
+      "change": "+12%",
+      "status": "Stable"
+    },
+    {
+      "metric": "Active Developer Wallets",
+      "value": "2,450",
+      "change": "+8%",
+      "status": "Growing"
+    },
+    {
+      "metric": "ZK-Compression Usage",
+      "value": "Significant Spike",
+      "change": "+45%",
+      "status": "Hot"
+    }
+  ],
+  "reddit_data": {
+    "top_keywords": [],
+    "post_count": 0,
+    "top_posts": [],
+    "subreddits_scraped": [
+      "solana",
+      "SolanaDevs"
     ],
-    "onchain_metrics": [
-        {
-            "metric": "New Program Deployments",
-            "value": "142",
-            "change": "+12%",
-            "status": "Stable"
-        },
-        {
-            "metric": "Active Developer Wallets",
-            "value": "2,450",
-            "change": "+8%",
-            "status": "Growing"
-        },
-        {
-            "metric": "ZK-Compression Usage",
-            "value": "Significant Spike",
-            "change": "+45%",
-            "status": "Hot"
-        }
-    ],
-    "market_intelligence": [
-        {
-            "source": "Helius Blog",
-            "summary": "AI agents can now self-fund their API keys via CLI"
-        },
-        {
-            "source": "Messari Report",
-            "summary": "Solana SVM becoming a pluggable execution layer for custom rollups"
-        },
-        {
-            "source": "Light Protocol Announcement",
-            "summary": "ZK-compression officially live, enabling massive state scaling"
-        },
-        {
-            "source": "Anatoly Twitter",
-            "summary": "Discussion on agent-centric design patterns for Solana programs"
-        },
-        {
-            "source": "Firedancer Team",
-            "summary": "Modular validator architecture allowing specialized SVM implementations"
-        }
-    ]
+    "timestamp": "2026-02-11T10:59:23.879793"
+  },
+  "generation_method": "AI-powered (Gemini 2.5 Flash)"
 }

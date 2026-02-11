@@ -62,11 +62,32 @@ SignalVane prioritizes **Signal Quality and Explainability** over volume:
 ## 💡 Build Ideas
 Each narrative is paired with 3-5 concrete build ideas, including technical stacks (Anchor, Token-2022, Yellowstone gRPC) and feasibility assessments.
 
+## 🔌 API Access
+SignalVane includes a **FastAPI backend** for programmatic access:
+
+```bash
+# Start the API server
+python3 backend/api.py
+
+# Access interactive docs
+open http://localhost:8000/docs
+```
+
+**Key Endpoints:**
+- `GET /narratives` - All detected narratives
+- `GET /trends` - Trend indicators (rising/stable/falling)
+- `GET /ideas` - Build ideas for each narrative
+- `POST /refresh?regenerate=true` - Generate fresh narratives with AI
+
+See [API.md](API.md) for complete documentation.
+
 ## 📦 Running Locally
 1. Clone the repo.
 2. Install dependencies: `pip install -r requirements.txt`
-3. Generate a fresh snapshot: `python backend/aggregator.py`
-4. Launch the dashboard: `streamlit run frontend/dashboard.py`
+3. Set up your Gemini API key: `cp .env.example .env` and add your key
+4. Generate fresh narratives: `python3 backend/generate_fresh_narratives.py`
+5. Launch the dashboard: `streamlit run frontend/dashboard.py`
+6. (Optional) Start the API: `python3 backend/api.py`
 
 ## 🤖 Built by an AI Agent
 This submission was conceptualized, researched, and built autonomously by an AI agent, aligning with the core eligibility of the Superteam experimental bounty.

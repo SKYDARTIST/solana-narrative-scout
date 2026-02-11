@@ -13,6 +13,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from backend.data_refresher import refresh_data, get_minutes_since_refresh
 from backend.historical_tracker import HistoricalTracker
+from backend.sentiment_analyzer import analyze_narrative_sentiment, get_sentiment_emoji
 
 # Page config for Premium Aesthetic
 st.set_page_config(
@@ -23,7 +24,7 @@ st.set_page_config(
 )
 
 # Auto-refresh configuration
-REFRESH_INTERVAL = 900  # 15 minutes in seconds
+REFRESH_INTERVAL = 300  # 5 minutes in seconds (truly real-time)
 
 # Custom CSS for Glassmorphism & Dark Mode (Enhanced)
 st.markdown("""
@@ -112,7 +113,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-@st.cache_data(ttl=900)  # Cache for 15 minutes
+@st.cache_data(ttl=300)  # Cache for 5 minutes (real-time updates)
 def load_data():
     """Load data with caching"""
     with open("data/snapshot.json", "r") as f:
@@ -123,20 +124,19 @@ def load_data():
         ideas = json.load(f)
     return snapshot, narratives, ideas
 
+@st.cache_data(ttl=300)  # Cache sentiment analysis for 5 minutes
 def get_sentiment_score(narrative):
     """
-    Calculate sentiment score for a narrative
-    Based on evidence and novelty score
+    AI-powered sentiment analysis using Gemini
+    Falls back to heuristic if AI fails
     """
-    score = narrative.get('novelty_score', 5)
+    # Try AI analysis first
+    result = analyze_narrative_sentiment(narrative)
 
-    # Simple heuristic: higher novelty = more positive sentiment
-    if score >= 8:
-        return "positive", "😊"
-    elif score >= 6:
-        return "neutral", "😐"
-    else:
-        return "negative", "😔"
+    sentiment = result.get('sentiment', 'neutral')
+    emoji = get_sentiment_emoji(sentiment)
+
+    return sentiment, emoji
 
 def get_trend_indicator(trend):
     """Get emoji and class for trend"""
@@ -193,10 +193,10 @@ def create_trend_chart(narrative_name, tracker):
     return fig
 
 def main():
-    # Auto-refresh mechanism
+    # Auto-refresh mechanism (every 5 minutes for real-time updates)
     minutes_since = get_minutes_since_refresh()
-    if minutes_since and minutes_since >= 15:
-        with st.spinner("Refreshing data..."):
+    if minutes_since and minutes_since >= 5:
+        with st.spinner("🔄 Refreshing real-time data..."):
             refresh_data()
             st.cache_data.clear()
             st.rerun()
@@ -215,7 +215,7 @@ def main():
     st.markdown(f"""
         <div class="refresh-indicator">
             🔄 Last updated: {minutes_ago} min ago
-            {'⚡ Live' if minutes_ago < 15 else '⏳ Refreshing soon...'}
+            {'⚡ Real-Time' if minutes_ago < 5 else '⏳ Refreshing now...'}
         </div>
     """, unsafe_allow_html=True)
 
@@ -257,9 +257,10 @@ def main():
 
     st.sidebar.markdown("---")
     st.sidebar.markdown("### 🛰️ Signal Sources")
-    st.sidebar.info("Real-time data from GitHub API, Helius Labs, and Messari Intelligence.")
+    st.sidebar.info("Real-time data from GitHub API, Reddit, and on-chain metrics.")
     st.sidebar.markdown(f"**Last Sync:** {snapshot['timestamp'][:16]}")
-    st.sidebar.markdown(f"**Next Refresh:** {15 - minutes_ago} minutes")
+    st.sidebar.markdown(f"**Next Refresh:** {max(0, 5 - minutes_ago)} min")
+    st.sidebar.markdown("⚡ **Update Frequency:** Every 5 minutes")
 
     # Main content
     st.markdown("### 🗺️ Live Narrative Map")

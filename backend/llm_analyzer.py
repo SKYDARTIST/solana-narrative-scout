@@ -14,7 +14,7 @@ class NarrativeAnalyzer:
             raise ValueError("GEMINI_API_KEY not found. Set it in .env file or pass as parameter.")
 
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
 
     def extract_narratives(self, signals_data):
         """
