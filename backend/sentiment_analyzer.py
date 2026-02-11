@@ -111,13 +111,13 @@ def batch_analyze_narratives(narratives):
     return results
 
 def get_sentiment_emoji(sentiment):
-    """Get emoji for sentiment"""
-    if sentiment == "positive":
-        return "😊"
-    elif sentiment == "neutral":
-        return "😐"
-    else:
-        return "😔"
+    """Get indicator for sentiment (formerly emoji)"""
+    return ""  # Emojis removed as requested
+
+if __name__ == "__main__":
+    # Test with sample narrative
+    print("Testing Sentiment Analyzer...")
+    # ... (rest of test code)
 
 if __name__ == "__main__":
     # Test with sample narrative
