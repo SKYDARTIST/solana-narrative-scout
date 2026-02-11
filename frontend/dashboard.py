@@ -211,15 +211,37 @@ st.markdown("""
         color: #1a1a1a !important;
     }
 
-    /* Equal height columns */
+    /* Equal height columns - FIXED */
+    [data-testid="column"] {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
     [data-testid="column"] > div {
-        height: 100%;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Make all idea cards same height */
+    .idea-card {
+        flex: 1 !important;
+        min-height: 550px !important;
+    }
+
+    /* Equal height for horizontal blocks */
+    [data-testid="stHorizontalBlock"] {
+        display: flex !important;
+        align-items: stretch !important;
     }
 
     /* Responsive text sizing */
     @media (max-width: 1200px) {
         .main-title {
             font-size: 2.5rem;
+        }
+        .idea-card {
+            min-height: 450px !important;
         }
     }
 
