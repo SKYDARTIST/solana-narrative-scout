@@ -201,6 +201,32 @@ st.markdown("""
         box-shadow: 5px 5px 0px #000000 !important;
         padding: 15px !important;
     }
+
+    /* Fix text visibility */
+    .narrative-card p, .narrative-card li, .narrative-card div {
+        color: #1a1a1a !important;
+    }
+
+    .idea-card p, .idea-card div {
+        color: #1a1a1a !important;
+    }
+
+    /* Equal height columns */
+    [data-testid="column"] > div {
+        height: 100%;
+    }
+
+    /* Responsive text sizing */
+    @media (max-width: 1200px) {
+        .main-title {
+            font-size: 2.5rem;
+        }
+    }
+
+    /* Force dark text in all cards */
+    .stMarkdown, .stMarkdown p, .stMarkdown div {
+        color: #1a1a1a;
+    }
     </style>
     """, unsafe_allow_html=True)
 
